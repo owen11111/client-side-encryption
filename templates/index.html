@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Client Encryption</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="{{url_for('static', filename='main.js')}}" defer></script>
+</head>
+<body>
+    <h1>Encrypt and Submit Message</h1>
+    <form id="encryptedForm" method="POST" action="/decrypt">
+        <input type="password" id="message" placeholder="Enter message">
+        <input type="hidden" name="encrypted_message" id="encrypted_message">
+        <button type="submit">Submit Encrypted</button>
+    </form>
+</body>
+</html>
